@@ -52,7 +52,7 @@ int count_words(FILE* file) {
 
 	char temp;
 	while ((temp = fgetc(file)) != EOF) {
-		if (temp == ' ' || temp == '\n') ++result;
+		if (temp == ' ' || temp == '\n' || temp == '\t' || temp == '\r' || temp == '\v') ++result;
 	}
 
 	rewind(file);
